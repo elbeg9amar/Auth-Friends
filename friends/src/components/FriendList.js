@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react'
 import Friend from './Friend'
 import PostFriend from './PostFriend'
 
+
 import {axiosWithAuth} from '../utils/axiosWithAuth'
 
 const FriendList = () => {
@@ -27,7 +28,7 @@ const FriendList = () => {
         <div>
         {
             friends.map(friend => {
-                return <Friend friend={friend}/>
+                return <Friend key={friend.id} friend={friend}/>
             })
         }
 
